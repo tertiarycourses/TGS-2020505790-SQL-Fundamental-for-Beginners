@@ -1,0 +1,13 @@
+# Internal Drive links — never publish
+.env
+
+# macOS / Office junk
+.DS_Store
+~$*
+*.tmp
+
+# Confidential assessment material is Drive/LMS only
+assessment/
+
+# Legacy/reference source decks — migration inputs, not deliverables
+reference/
