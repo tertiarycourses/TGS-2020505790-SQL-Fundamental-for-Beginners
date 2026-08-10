@@ -11,3 +11,6 @@ assessment/
 
 # Legacy/reference source decks — migration inputs, not deliverables
 reference/
+
+# Dataset generator marker
+labs/datasets/.generated-by-build_datasets

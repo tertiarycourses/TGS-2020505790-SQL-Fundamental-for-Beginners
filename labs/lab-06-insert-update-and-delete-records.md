@@ -4,55 +4,97 @@
 
 **Objective:** LO2 — process data by inserting, updating and deleting records (A3, A5).
 
-**Goal:** Change data safely: INSERT new city rows, UPDATE them with a WHERE clause, DELETE a specific record, and load the sample database from the provided insert script.
+**Goal:** Change data safely: INSERT a new product line, UPDATE prices with a WHERE clause, DELETE a discontinued record, and reload the dataset from the provided seed script.
 
-**You'll build:** A modified City table proving you can add, change and remove records — plus a fully-loaded sample database.
+**You'll build:** A modified Products table proving you can add, change and remove records — plus a cleanly reloaded database.
 
-**Tools:** SQLite Studio, world & sample databases, insert script from the LMS
+**Tools:** SQLite Studio, sgmart database, lab-06 seed script
 
 ![Lab 6 — SQL editor](../figures/lab-06.png)
 
 *Figure 6 — the SQL editor after running this lab's key statement.*
 
+## Mock data for this lab
+
+Everything this lab needs is in [`datasets/lab-06-insert-update-and-delete-records/`](datasets/lab-06-insert-update-and-delete-records/) — CSV files you can open in Excel, plus a seed script that creates and fills the tables in one go.
+
+| Table | Rows | What it holds |
+|---|---:|---|
+| [`Products`](datasets/lab-06-insert-update-and-delete-records/Products.csv) | 25 | 25 SKUs with cost, retail price, category, supplier and reorder level (some NULL). |
+| [`Customers`](datasets/lab-06-insert-update-and-delete-records/Customers.csv) | 60 | 60 loyalty members — tier, join date, points, birth year (some NULL) and home district. |
+| [`Orders`](datasets/lab-06-insert-update-and-delete-records/Orders.csv) | 180 | 180 sales orders across 2025 — outlet, member (NULL for walk-ins), cashier, channel, payment and status. |
+
+**Quickest way to load it:** open [`datasets/lab-06-insert-update-and-delete-records/seed_sqlite.sql`](datasets/lab-06-insert-update-and-delete-records/seed_sqlite.sql) in the SQLite Studio SQL editor and execute the whole script. On MySQL or SQL Server use [`seed_mysql.sql`](datasets/lab-06-insert-update-and-delete-records/seed_mysql.sql) instead. The complete course dataset — including an Excel workbook and a prebuilt `sgmart.db` — is in [`datasets/_all/`](datasets/_all/).
+
 ## Steps
 
-1. Insert a new city into the City table, supplying just the columns you know — the rest take their defaults.
+1. SG Mart is adding a new bakery line. Insert it, supplying just the columns you know — the rest take their defaults.
 
    ```sql
-   INSERT INTO City (Name, CountryCode)
-   VALUES ('Singapore', 'SGP');
+   INSERT INTO Products (SKU, ProductName, CategoryCode, UnitOfMeasure, UnitCost, UnitPrice, SupplierID)
+   VALUES ('SKU1026', 'Pandan Chiffon Cake 450g', 'CAT03', 'each', 4.50, 8.20, 'SUP04');
    ```
 
 2. Verify the insert — find your new row.
 
    ```sql
-   SELECT * FROM City WHERE Name = 'Singapore';
+   SELECT * FROM Products WHERE SKU = 'SKU1026';
    ```
 
-3. Update records with a WHERE clause — rename every city in the Kabol district.
+3. Insert several rows in one statement — three new members joining at the Punggol launch.
 
    ```sql
-   UPDATE City
-   SET Name = 'Kabol'
-   WHERE District = 'Kabol';
+   INSERT INTO Customers (CustomerID, FirstName, LastName, MemberTier, JoinDate, PointsBalance, BirthYear, District, Phone, Email)
+   VALUES
+     (1061, 'Wei Jie', 'Tan',  'Basic',  '2025-11-02', 0,    1996, 'Punggol', '9123 4567', 'weijie.tan@example.com'),
+     (1062, 'Nur Syahirah', 'Osman', 'Basic', '2025-11-02', 50, 1990, 'Punggol', '8234 5678', NULL),
+     (1063, 'Divya', 'Menon', 'Silver', '2025-11-03', 1200, 1988, 'Sengkang', '9345 6789', 'divya.menon@example.com');
    ```
 
-4. Delete one specific record by its primary key. (Never run DELETE without WHERE — it removes every row.)
+4. Update records with a WHERE clause — a 10% price rise on every Beverages line. Always SELECT first to see what you are about to change.
 
    ```sql
-   DELETE FROM City WHERE ID = 3285;
+   SELECT ProductName, UnitPrice FROM Products WHERE CategoryCode = 'CAT04';
+   
+   UPDATE Products
+   SET UnitPrice = ROUND(UnitPrice * 1.10, 2)
+   WHERE CategoryCode = 'CAT04';
+   
+   SELECT ProductName, UnitPrice FROM Products WHERE CategoryCode = 'CAT04';
    ```
 
-5. Load the sample database: download the insert-data script (world-inserts.sql) from the course materials on the LMS, open it in the sample database's SQL editor and execute it to populate City, Country and CountryLanguage.
-6. Confirm the load with row counts.
+5. Update more than one column at once — promote a member and credit bonus points.
 
    ```sql
-   SELECT COUNT(*) FROM City;
-   SELECT COUNT(*) FROM Country;
-   SELECT COUNT(*) FROM CountryLanguage;
+   UPDATE Customers
+   SET MemberTier = 'Gold',
+       PointsBalance = PointsBalance + 500
+   WHERE CustomerID = 1063;
+   ```
+
+6. Delete one specific record by its primary key. (Never run DELETE without WHERE — it removes every row.)
+
+   ```sql
+   DELETE FROM Products WHERE SKU = 'SKU1026';
+   ```
+
+7. Delete a set of rows with a condition — clear out the cancelled orders.
+
+   ```sql
+   SELECT COUNT(*) FROM Orders WHERE Status = 'Cancelled';
+   DELETE FROM Orders WHERE Status = 'Cancelled';
+   ```
+
+8. Restore the database to its original state: open seed_sqlite.sql from this lab's dataset folder and execute it. The script drops and recreates every table, so your practice changes are undone.
+9. Confirm the reload with row counts.
+
+   ```sql
+   SELECT COUNT(*) AS Products FROM Products;
+   SELECT COUNT(*) AS Customers FROM Customers;
+   SELECT COUNT(*) AS Orders FROM Orders;
    ```
 
 
 ## Test it
 
-The Singapore row appears after the INSERT; the Kabol-district rows show the updated name; row ID 3285 is gone; and the three COUNT(*) queries return non-zero row counts in the sample database.
+The SKU1026 row appears after the INSERT and is gone after the DELETE; the three new members are added; Beverages prices rise by 10% (Sparkling Water 1.5L goes from 2.35 to 2.59); and after reloading, the counts return 25 products, 60 customers and 180 orders.

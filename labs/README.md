@@ -1,12 +1,20 @@
 # SQL Fundamental for Beginners — Hands-On Labs
 
-**WSQ Course Code:** TGS-2020505790 · **Version v12** · Tertiary Infotech Academy Pte Ltd
+**WSQ Course Code:** TGS-2020505790 · **Version v13** · Tertiary Infotech Academy Pte Ltd
 
-Full step-by-step for every lab is also in the Learner Guide (LG). Labs run in SQLite Studio (https://sqlitestudio.pl) or https://sqliteonline.com against the world sample database from the LMS (https://lms-tms.tertiaryinfotech.com).
+Full step-by-step for every lab is also in the Learner Guide (LG). Labs run in SQLite Studio (https://sqlitestudio.pl) or https://sqliteonline.com.
+
+## Mock data
+
+Every lab has its **own dataset folder** under [`datasets/`](datasets/) holding the tables that lab needs as CSV, plus a ready-to-run seed script. The whole course set — an Excel workbook, a prebuilt `sgmart.db` SQLite database and all CSVs — is in [`datasets/_all/`](datasets/_all/).
+
+The running example is **SG Mart Pte Ltd**, a fictitious Singapore retail chain (8 outlets, 42 staff, 60 members, 25 products, 180 orders, 685 order lines). Topic 4 switches to an **SMRT** transport model for the data-warehouse case study. All data is invented for training and identifies no real person or company.
+
+The original MySQL/SQLite sample databases used by earlier versions of this course (`world.db`, `album.db`, `test.db` and their .sql scripts) are kept in [`legacy-datasets/`](legacy-datasets/) for reference and for trainers who want the larger world dataset for extra practice.
 
 ## Topic 01 — Data Modeling
 
-- [Lab 1: Set Up SQLite Studio & Import the World Database](lab-01-set-up-sqlite-studio-import-the-world-database.md)
+- [Lab 1: Set Up SQLite Studio & Import the SG Mart Database](lab-01-set-up-sqlite-studio-import-the-sg-mart-database.md)
 - [Lab 2: Create a Database and Tables](lab-02-create-a-database-and-tables.md)
 - [Lab 3: Model Data with Constraints and Keys](lab-03-model-data-with-constraints-and-keys.md)
 
