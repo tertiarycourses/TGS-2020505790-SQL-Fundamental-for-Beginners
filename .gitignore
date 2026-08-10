@@ -14,3 +14,6 @@ reference/
 
 # Dataset generator marker
 labs/datasets/.generated-by-build_datasets
+
+# Distribution archives (rebuildable — never pushed to GitHub)
+*.zip
