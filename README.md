@@ -3,25 +3,26 @@
 **WSQ Course Code:** TGS-2020505790
 **Conducted by:** Tertiary Infotech Academy Pte Ltd (UEN 201200696W)
 **Trainer:** Dr. Alfred Ang
-**Duration:** 1 day · 8 training hours (9:00 am – 6:00 pm, 1-hour lunch)
+**Duration:** 1 day · 8 training hours (9:30 am – 6:30 pm, 1-hour lunch)
 **Skills Framework:** Data Engineering — ICT-DIT-3005-1.1 (ICT Skills Framework)
-**Version:** v12 · 8 August 2026
+**Version:** v13 · 11 August 2026
 **Course page:** https://www.tertiarycourses.com.sg/wsq-sql-fundamental-for-beginners.html
 
 A hands-on introduction to SQL: model data, query and analyse it, transform it across
 multiple tables, and map it into a data warehouse — all in SQLite Studio against the
-`world` sample database.
+**SG Mart** sample database, a fictitious Singapore retail chain supplied with the course.
 
 ## Contents
 
 | Artifact | Path |
 |---|---|
-| Trainer slide deck (130 slides) | [courseware/SQL Fundamental for Beginners-v12.pptx](courseware/SQL%20Fundamental%20for%20Beginners-v12.pptx) |
-| Learner slides (PDF) | [courseware/SQL Fundamental for Beginners-v12.pdf](courseware/SQL%20Fundamental%20for%20Beginners-v12.pdf) |
+| Trainer slide deck (132 slides) | [courseware/SQL Fundamental for Beginners-v13.pptx](courseware/SQL%20Fundamental%20for%20Beginners-v13.pptx) |
+| Learner slides (PDF) | [courseware/SQL Fundamental for Beginners-v13.pdf](courseware/SQL%20Fundamental%20for%20Beginners-v13.pdf) |
 | Lesson Plan | [courseware/LP-SQL Fundamental for Beginners.docx](courseware/LP-SQL%20Fundamental%20for%20Beginners.docx) · [PDF](courseware/LP-SQL%20Fundamental%20for%20Beginners.pdf) |
 | Learner Guide | [courseware/LG-SQL Fundamental for Beginners.docx](courseware/LG-SQL%20Fundamental%20for%20Beginners.docx) · [PDF](courseware/LG-SQL%20Fundamental%20for%20Beginners.pdf) |
 | Learner Guide (Markdown mirror) | [LG-SQL Fundamental for Beginners.md](LG-SQL%20Fundamental%20for%20Beginners.md) |
 | Hands-on labs (11) | [labs/](labs/) — see [labs/README.md](labs/README.md) |
+| Mock datasets (per lab) | [labs/datasets/](labs/datasets/) — CSV, Excel, SQL seeds and a prebuilt `sgmart.db` |
 
 The slide deck is **visual only** — every detailed step-by-step procedure lives in the
 Learner Guide and the `labs/` files, by design.
@@ -46,7 +47,29 @@ Learner Guide and the `labs/` files, by design.
 
 - **SQLite Studio** — https://sqlitestudio.pl (free, cross-platform)
 - **sqliteonline.com** — browser alternative, also provides an MS SQL engine for Lab 11
-- **world sample database** (`world.db`) — download from the LMS with the course materials
+- **SG Mart mock dataset** — supplied in [labs/datasets/](labs/datasets/): one folder per lab with CSVs and a seed script, plus [`_all/`](labs/datasets/_all/) holding an Excel workbook and a prebuilt `sgmart.db`. Also downloadable from the LMS with the course materials.
+
+## The course dataset — SG Mart Pte Ltd
+
+Every lab queries one continuous business story: **SG Mart Pte Ltd**, a fictitious
+Singapore retail chain with 8 outlets, 42 staff, 60 loyalty members, 9 suppliers,
+25 products, 180 orders and 685 order lines. Topic 4 switches to an **SMRT**
+public-transport model (routes, stations, timetables, disruptions) for the
+data-warehouse case study.
+
+Each lab has its own folder under [labs/datasets/](labs/datasets/) containing only the
+tables that lab needs — as CSV (Excel-friendly), plus `seed_sqlite.sql` and
+`seed_mysql.sql` that create and fill everything in one execution. The complete set,
+including `SG-Mart-Mock-Data.xlsx` and a prebuilt `sgmart.db`, is in
+[labs/datasets/_all/](labs/datasets/_all/).
+
+Some columns are deliberately empty (walk-in orders with no member, staff without a work
+email, products without a reorder level) so `IS NULL`, `LEFT JOIN` and `COUNT()` behave
+the way they do on real data. All data is invented for training and identifies no real
+person or organisation.
+
+The original sample databases from earlier versions of the course (`world.db`, `album.db`
+and their SQL scripts) are kept in [labs/legacy-datasets/](labs/legacy-datasets/).
 
 ## Assessment
 
@@ -59,7 +82,7 @@ of *Competent* are required for funding eligibility.
 
 ## Course materials and attendance
 
-Learners download the slides, Learner Guide and `world.db` from the LMS/TMS portal at
+Learners download the slides, Learner Guide and the course datasets from the LMS/TMS portal at
 **https://lms-tms.tertiaryinfotech.com**, where the mandatory TRAQOM feedback survey and
 e-certificate also live. AM, PM and Assessment digital attendance is mandatory for
 WSQ-funded courses.
