@@ -10,21 +10,21 @@
 
 **Tools:** SQLite Studio, sgmart database, lab-06 seed script
 
-![Lab 6 — SQL editor](../figures/lab-06.png)
+![Lab 6 — SQL editor](../../figures/lab-06.png)
 
 *Figure 6 — the SQL editor after running this lab's key statement.*
 
 ## Mock data for this lab
 
-Everything this lab needs is in [`datasets/lab-06-insert-update-and-delete-records/`](datasets/lab-06-insert-update-and-delete-records/) — CSV files you can open in Excel, plus a seed script that creates and fills the tables in one go.
+The data is in this same folder — CSV files you can open in Excel, plus a seed script that creates and fills the tables in one go.
 
 | Table | Rows | What it holds |
 |---|---:|---|
-| [`Products`](datasets/lab-06-insert-update-and-delete-records/Products.csv) | 25 | 25 SKUs with cost, retail price, category, supplier and reorder level (some NULL). |
-| [`Customers`](datasets/lab-06-insert-update-and-delete-records/Customers.csv) | 60 | 60 loyalty members — tier, join date, points, birth year (some NULL) and home district. |
-| [`Orders`](datasets/lab-06-insert-update-and-delete-records/Orders.csv) | 180 | 180 sales orders across 2025 — outlet, member (NULL for walk-ins), cashier, channel, payment and status. |
+| [`Products`](Products.csv) | 25 | 25 SKUs with cost, retail price, category, supplier and reorder level (some NULL). |
+| [`Customers`](Customers.csv) | 60 | 60 loyalty members — tier, join date, points, birth year (some NULL) and home district. |
+| [`Orders`](Orders.csv) | 180 | 180 sales orders across 2025 — outlet, member (NULL for walk-ins), cashier, channel, payment and status. |
 
-**Quickest way to load it:** open [`datasets/lab-06-insert-update-and-delete-records/seed_sqlite.sql`](datasets/lab-06-insert-update-and-delete-records/seed_sqlite.sql) in the SQLite Studio SQL editor and execute the whole script. On MySQL or SQL Server use [`seed_mysql.sql`](datasets/lab-06-insert-update-and-delete-records/seed_mysql.sql) instead. The complete course dataset — including an Excel workbook and a prebuilt `sgmart.db` — is in [`datasets/_all/`](datasets/_all/).
+**Quickest way to load it:** open [`seed_sqlite.sql`](seed_sqlite.sql) in the SQLite Studio SQL editor and execute the whole script. On MySQL or SQL Server use [`seed_mysql.sql`](seed_mysql.sql) instead. The complete course dataset — including an Excel workbook and a prebuilt `sgmart.db` — is in [`../_all/`](../_all/).
 
 ## Steps
 

@@ -10,22 +10,22 @@
 
 **Tools:** SQLite Studio, sgmart_practice database, lab-10 dataset (Routes, Stations, Timetables, DisruptedRoutes)
 
-![Lab 10 — SQL editor](../figures/lab-10.png)
+![Lab 10 — SQL editor](../../figures/lab-10.png)
 
 *Figure 10 — the SQL editor after running this lab's key statement.*
 
 ## Mock data for this lab
 
-Everything this lab needs is in [`datasets/lab-10-map-an-e-r-model-to-database-tables-smrt-case-st/`](datasets/lab-10-map-an-e-r-model-to-database-tables-smrt-case-st/) — CSV files you can open in Excel, plus a seed script that creates and fills the tables in one go.
+The data is in this same folder — CSV files you can open in Excel, plus a seed script that creates and fills the tables in one go.
 
 | Table | Rows | What it holds |
 |---|---:|---|
-| [`Routes`](datasets/lab-10-map-an-e-r-model-to-database-tables-smrt-case-st/Routes.csv) | 8 | 8 SMRT routes (6 MRT lines + 2 bus services) — the parent entity of the transport E-R model. |
-| [`Stations`](datasets/lab-10-map-an-e-r-model-to-database-tables-smrt-case-st/Stations.csv) | 14 | 14 MRT stations with line position, interchange flag and opening date. |
-| [`Timetables`](datasets/lab-10-map-an-e-r-model-to-database-tables-smrt-case-st/Timetables.csv) | 42 | 42 timetable rows — first/last trip and frequency per station for weekday, Saturday and Sunday/PH. |
-| [`DisruptedRoutes`](datasets/lab-10-map-an-e-r-model-to-database-tables-smrt-case-st/DisruptedRoutes.csv) | 6 | 6 service disruptions in 2025 — type, details, start time, duration and the alternative arrangements offered. |
+| [`Routes`](Routes.csv) | 8 | 8 SMRT routes (6 MRT lines + 2 bus services) — the parent entity of the transport E-R model. |
+| [`Stations`](Stations.csv) | 14 | 14 MRT stations with line position, interchange flag and opening date. |
+| [`Timetables`](Timetables.csv) | 42 | 42 timetable rows — first/last trip and frequency per station for weekday, Saturday and Sunday/PH. |
+| [`DisruptedRoutes`](DisruptedRoutes.csv) | 6 | 6 service disruptions in 2025 — type, details, start time, duration and the alternative arrangements offered. |
 
-**Quickest way to load it:** open [`datasets/lab-10-map-an-e-r-model-to-database-tables-smrt-case-st/seed_sqlite.sql`](datasets/lab-10-map-an-e-r-model-to-database-tables-smrt-case-st/seed_sqlite.sql) in the SQLite Studio SQL editor and execute the whole script. On MySQL or SQL Server use [`seed_mysql.sql`](datasets/lab-10-map-an-e-r-model-to-database-tables-smrt-case-st/seed_mysql.sql) instead. The complete course dataset — including an Excel workbook and a prebuilt `sgmart.db` — is in [`datasets/_all/`](datasets/_all/).
+**Quickest way to load it:** open [`seed_sqlite.sql`](seed_sqlite.sql) in the SQLite Studio SQL editor and execute the whole script. On MySQL or SQL Server use [`seed_mysql.sql`](seed_mysql.sql) instead. The complete course dataset — including an Excel workbook and a prebuilt `sgmart.db` — is in [`../_all/`](../_all/).
 
 ## Steps
 

@@ -2,7 +2,7 @@
 
 **TGS-2020505790** · v13 · Tertiary Infotech Academy Pte Ltd
 
-Every lab has its **own dataset subfolder** below, holding just the tables that lab needs as CSV plus a ready-to-run seed script. The complete set — including an Excel workbook and a prebuilt SQLite database — is in [`_all/`](_all/).
+This folder holds the **complete** course dataset: every table as CSV, an Excel workbook and a prebuilt `sgmart.db`. Each individual lab also carries just the tables it needs, in that lab's own folder beside its instructions.
 
 ## The business story
 
@@ -10,23 +10,23 @@ Every lab has its **own dataset subfolder** below, holding just the tables that 
 
 > All data is invented for training. Names, phone numbers, emails and badge numbers do not identify any real person or organisation.
 
-## Per-lab datasets
+## Which lab uses which tables
 
 | Lab | Title | Tables |
 |---|---|---|
-| 1 | [Set Up SQLite Studio & Import the SG Mart Database](lab-01-set-up-sqlite-studio-import-the-sg-mart-database/) | `Outlets`, `Categories`, `Products` |
-| 2 | [Create a Database and Tables](lab-02-create-a-database-and-tables/) | `Outlets`, `Categories`, `Suppliers`, `Products` |
-| 3 | [Model Data with Constraints and Keys](lab-03-model-data-with-constraints-and-keys/) | `Persons`, `PersonOrders` |
-| 4 | [Query Data with SELECT](lab-04-query-data-with-select/) | `Outlets`, `Categories`, `Products` |
-| 5 | [Filter with SQL Operators](lab-05-filter-with-sql-operators/) | `Customers`, `Staff`, `Products` |
-| 6 | [Insert, Update and Delete Records](lab-06-insert-update-and-delete-records/) | `Customers`, `Products`, `Orders` |
-| 7 | [Aggregate Data with COUNT, AVG and SUM](lab-07-aggregate-data-with-count-avg-and-sum/) | `Products`, `Orders`, `OrderItems` |
-| 8 | [Join Data from Multiple Tables](lab-08-join-data-from-multiple-tables/) | `Outlets`, `Customers`, `Products`, `Orders`, `OrderItems`, `left_t`, `right_t` |
-| 9 | [Group Data with GROUP BY and HAVING](lab-09-group-data-with-group-by-and-having/) | `Outlets`, `Categories`, `Products`, `Orders`, `OrderItems` |
-| 10 | [Map an E-R Model to Database Tables (SMRT Case Study)](lab-10-map-an-e-r-model-to-database-tables-smrt-case-st/) | `Routes`, `Stations`, `Timetables`, `DisruptedRoutes` |
-| 11 | [Author Stored Procedures for SQL Server](lab-11-author-stored-procedures-for-sql-server/) | `Outlets`, `Customers`, `Orders` |
+| 1 | [Set Up SQLite Studio & Import the SG Mart Database](../lab-01-set-up-sqlite-studio-import-the-sg-mart-database/) | `Outlets`, `Categories`, `Products` |
+| 2 | [Create a Database and Tables](../lab-02-create-a-database-and-tables/) | `Outlets`, `Categories`, `Suppliers`, `Products` |
+| 3 | [Model Data with Constraints and Keys](../lab-03-model-data-with-constraints-and-keys/) | `Persons`, `PersonOrders` |
+| 4 | [Query Data with SELECT](../lab-04-query-data-with-select/) | `Outlets`, `Categories`, `Products` |
+| 5 | [Filter with SQL Operators](../lab-05-filter-with-sql-operators/) | `Customers`, `Staff`, `Products` |
+| 6 | [Insert, Update and Delete Records](../lab-06-insert-update-and-delete-records/) | `Customers`, `Products`, `Orders` |
+| 7 | [Aggregate Data with COUNT, AVG and SUM](../lab-07-aggregate-data-with-count-avg-and-sum/) | `Products`, `Orders`, `OrderItems` |
+| 8 | [Join Data from Multiple Tables](../lab-08-join-data-from-multiple-tables/) | `Outlets`, `Customers`, `Products`, `Orders`, `OrderItems`, `left_t`, `right_t` |
+| 9 | [Group Data with GROUP BY and HAVING](../lab-09-group-data-with-group-by-and-having/) | `Outlets`, `Categories`, `Products`, `Orders`, `OrderItems` |
+| 10 | [Map an E-R Model to Database Tables (SMRT Case Study)](../lab-10-map-an-e-r-model-to-database-tables-smrt-case-st/) | `Routes`, `Stations`, `Timetables`, `DisruptedRoutes` |
+| 11 | [Author Stored Procedures for SQL Server](../lab-11-author-stored-procedures-for-sql-server/) | `Outlets`, `Customers`, `Orders` |
 
-## Full bundle — [`_all/`](_all/)
+## Files in this folder
 
 | File | What it is |
 |---|---|

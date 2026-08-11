@@ -10,22 +10,22 @@
 
 **Tools:** SQLite Studio, SQL Editor, lab-02 dataset (CSV + seed script)
 
-![Lab 2 — SQL editor](../figures/lab-02.png)
+![Lab 2 — SQL editor](../../figures/lab-02.png)
 
 *Figure 2 — the SQL editor after running this lab's key statement.*
 
 ## Mock data for this lab
 
-Everything this lab needs is in [`datasets/lab-02-create-a-database-and-tables/`](datasets/lab-02-create-a-database-and-tables/) — CSV files you can open in Excel, plus a seed script that creates and fills the tables in one go.
+The data is in this same folder — CSV files you can open in Excel, plus a seed script that creates and fills the tables in one go.
 
 | Table | Rows | What it holds |
 |---|---:|---|
-| [`Outlets`](datasets/lab-02-create-a-database-and-tables/Outlets.csv) | 8 | The 8 SG Mart retail outlets — code, name, planning area, postal sector, opening date and floor area. |
-| [`Categories`](datasets/lab-02-create-a-database-and-tables/Categories.csv) | 8 | 8 product categories grouped into Perishables, Packaged and Non-Food. |
-| [`Suppliers`](datasets/lab-02-create-a-database-and-tables/Suppliers.csv) | 9 | 9 suppliers with contact details, country of origin and lead time in days. |
-| [`Products`](datasets/lab-02-create-a-database-and-tables/Products.csv) | 25 | 25 SKUs with cost, retail price, category, supplier and reorder level (some NULL). |
+| [`Outlets`](Outlets.csv) | 8 | The 8 SG Mart retail outlets — code, name, planning area, postal sector, opening date and floor area. |
+| [`Categories`](Categories.csv) | 8 | 8 product categories grouped into Perishables, Packaged and Non-Food. |
+| [`Suppliers`](Suppliers.csv) | 9 | 9 suppliers with contact details, country of origin and lead time in days. |
+| [`Products`](Products.csv) | 25 | 25 SKUs with cost, retail price, category, supplier and reorder level (some NULL). |
 
-**Quickest way to load it:** open [`datasets/lab-02-create-a-database-and-tables/seed_sqlite.sql`](datasets/lab-02-create-a-database-and-tables/seed_sqlite.sql) in the SQLite Studio SQL editor and execute the whole script. On MySQL or SQL Server use [`seed_mysql.sql`](datasets/lab-02-create-a-database-and-tables/seed_mysql.sql) instead. The complete course dataset — including an Excel workbook and a prebuilt `sgmart.db` — is in [`datasets/_all/`](datasets/_all/).
+**Quickest way to load it:** open [`seed_sqlite.sql`](seed_sqlite.sql) in the SQLite Studio SQL editor and execute the whole script. On MySQL or SQL Server use [`seed_mysql.sql`](seed_mysql.sql) instead. The complete course dataset — including an Excel workbook and a prebuilt `sgmart.db` — is in [`../_all/`](../_all/).
 
 ## Steps
 

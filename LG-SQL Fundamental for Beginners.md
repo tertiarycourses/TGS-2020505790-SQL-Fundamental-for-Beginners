@@ -1,6 +1,6 @@
 # SQL Fundamental for Beginners — Learner Guide
 
-**WSQ Course Code:** TGS-2020505790  |  **Conducted by:** Tertiary Infotech Academy Pte Ltd (UEN 201200696W)  |  **Version v13 · 11 August 2026**
+**WSQ Course Code:** TGS-2020505790  |  **Conducted by:** Tertiary Infotech Academy Pte Ltd (UEN 201200696W)  |  **Version v14 · 11 August 2026**
 
 ## Contents
 
@@ -102,10 +102,10 @@ Every lab in this course works with one continuous business story so you are alw
 
 **Where to find it**
 
-- Each lab has its own folder under courseware/labs/datasets/ holding just the tables that lab needs, as CSV, plus a seed script.
+- Each lab has its own folder under courseware/labs/ holding the instructions, the tables that lab needs as CSV, and the seed scripts — all together.
 - seed_sqlite.sql creates and fills every table for that lab in one execution — this is the fastest way to start.
 - seed_mysql.sql is the same data in MySQL / SQL Server syntax, used for the stored-procedure lab.
-- courseware/labs/datasets/_all/ holds the complete set: SG-Mart-Mock-Data.xlsx (one sheet per table), the prebuilt sgmart.db, and every CSV.
+- courseware/labs/_all/ holds the complete set: SG-Mart-Mock-Data.xlsx (one sheet per table), the prebuilt sgmart.db, and every CSV.
 
 **A note on empty values**
 
@@ -148,7 +148,7 @@ A working SQLite Studio with the SG Mart database connected, showing the Outlets
 
 **Mock data for this lab**
 
-Load the data before you start. The tables below are supplied as CSV in courseware/labs/datasets/lab-01-*/, together with seed_sqlite.sql — open that script in the SQL editor and execute it to create and fill every table in one step.
+Load the data before you start. The tables below are supplied as CSV in courseware/labs/lab-01-*/ — the same folder as this lab's instructions — together with seed_sqlite.sql. Open that script in the SQL editor and execute it to create and fill every table in one step.
 
 | Table | Rows | What it holds |
 |---|---|---|
@@ -191,7 +191,7 @@ Load the data before you start. The tables below are supplied as CSV in coursewa
 
 The Databases panel shows the connected sgmart database with the Outlets, Products, Customers, Orders and OrderItems tables; the Data tab displays outlet rows; and the ORDER BY query returns 8 outlets led by SG Mart Tampines Hub (1680.5 sqm).
 
-> **Note:** The same steps are in courseware/labs/lab-01-*.md in the course repository.
+> **Note:** The same steps are in courseware/labs/lab-01-*/ in the course repository, alongside that lab's CSV data and SQL seed scripts.
 
 ---
 
@@ -208,7 +208,7 @@ A new 'sgmart_practice' database containing four tables whose columns, data type
 
 **Mock data for this lab**
 
-Load the data before you start. The tables below are supplied as CSV in courseware/labs/datasets/lab-02-*/, together with seed_sqlite.sql — open that script in the SQL editor and execute it to create and fill every table in one step.
+Load the data before you start. The tables below are supplied as CSV in courseware/labs/lab-02-*/ — the same folder as this lab's instructions — together with seed_sqlite.sql. Open that script in the SQL editor and execute it to create and fill every table in one step.
 
 | Table | Rows | What it holds |
 |---|---|---|
@@ -296,7 +296,7 @@ Load the data before you start. The tables below are supplied as CSV in coursewa
 
 The sgmart_practice database lists Outlets, Categories, Suppliers and Products; each Structure tab shows the declared columns, data types, defaults and primary keys; and the counts return 8, 8, 9 and 25 rows.
 
-> **Note:** The same steps are in courseware/labs/lab-02-*.md in the course repository.
+> **Note:** The same steps are in courseware/labs/lab-02-*/ in the course repository, alongside that lab's CSV data and SQL seed scripts.
 
 ---
 
@@ -313,7 +313,7 @@ A two-table data model (Persons ← PersonOrders) with working constraints, a fo
 
 **Mock data for this lab**
 
-Load the data before you start. The tables below are supplied as CSV in courseware/labs/datasets/lab-03-*/, together with seed_sqlite.sql — open that script in the SQL editor and execute it to create and fill every table in one step.
+Load the data before you start. The tables below are supplied as CSV in courseware/labs/lab-03-*/ — the same folder as this lab's instructions — together with seed_sqlite.sql. Open that script in the SQL editor and execute it to create and fill every table in one step.
 
 | Table | Rows | What it holds |
 |---|---|---|
@@ -425,7 +425,7 @@ Load the data before you start. The tables below are supplied as CSV in coursewa
 
 The valid insert appears in Persons with City = 'Singapore'; the three rule-breaking inserts each raise a constraint error; the join returns 7 matched orders led by 312.75; PersonOrders shows a foreign key to Persons in its DDL; and idx_lastname is listed under Indexes.
 
-> **Note:** The same steps are in courseware/labs/lab-03-*.md in the course repository.
+> **Note:** The same steps are in courseware/labs/lab-03-*/ in the course repository, alongside that lab's CSV data and SQL seed scripts.
 
 ---
 
@@ -454,7 +454,7 @@ A set of working queries answering questions about SG Mart's products, categorie
 
 **Mock data for this lab**
 
-Load the data before you start. The tables below are supplied as CSV in courseware/labs/datasets/lab-04-*/, together with seed_sqlite.sql — open that script in the SQL editor and execute it to create and fill every table in one step.
+Load the data before you start. The tables below are supplied as CSV in courseware/labs/lab-04-*/ — the same folder as this lab's instructions — together with seed_sqlite.sql. Open that script in the SQL editor and execute it to create and fill every table in one step.
 
 | Table | Rows | What it holds |
 |---|---|---|
@@ -522,7 +522,7 @@ Load the data before you start. The tables below are supplied as CSV in coursewa
 
 Each query runs without error; the DISTINCT query returns 8 category codes; the top-10 price query is led by Pineapple Tarts 300g at $11.90; and the largest outlet is SG Mart Tampines Hub (1680.5 sqm).
 
-> **Note:** The same steps are in courseware/labs/lab-04-*.md in the course repository.
+> **Note:** The same steps are in courseware/labs/lab-04-*/ in the course repository, alongside that lab's CSV data and SQL seed scripts.
 
 ---
 
@@ -539,7 +539,7 @@ A query toolkit covering every SQL operator, answering pattern- and range-based 
 
 **Mock data for this lab**
 
-Load the data before you start. The tables below are supplied as CSV in courseware/labs/datasets/lab-05-*/, together with seed_sqlite.sql — open that script in the SQL editor and execute it to create and fill every table in one step.
+Load the data before you start. The tables below are supplied as CSV in courseware/labs/lab-05-*/ — the same folder as this lab's instructions — together with seed_sqlite.sql. Open that script in the SQL editor and execute it to create and fill every table in one step.
 
 | Table | Rows | What it holds |
 |---|---|---|
@@ -631,7 +631,7 @@ Load the data before you start. The tables below are supplied as CSV in coursewa
 
 The IN query returns 16 Gold and Platinum members ordered by points; BETWEEN returns 11 products from $3.20 to $5.95; LIKE 'Frozen%' returns the 2 frozen lines; and IS NULL returns the 5 staff with no email, shown under the alias StaffName.
 
-> **Note:** The same steps are in courseware/labs/lab-05-*.md in the course repository.
+> **Note:** The same steps are in courseware/labs/lab-05-*/ in the course repository, alongside that lab's CSV data and SQL seed scripts.
 
 ---
 
@@ -648,7 +648,7 @@ A modified Products table proving you can add, change and remove records — plu
 
 **Mock data for this lab**
 
-Load the data before you start. The tables below are supplied as CSV in courseware/labs/datasets/lab-06-*/, together with seed_sqlite.sql — open that script in the SQL editor and execute it to create and fill every table in one step.
+Load the data before you start. The tables below are supplied as CSV in courseware/labs/lab-06-*/ — the same folder as this lab's instructions — together with seed_sqlite.sql. Open that script in the SQL editor and execute it to create and fill every table in one step.
 
 | Table | Rows | What it holds |
 |---|---|---|
@@ -733,7 +733,7 @@ Load the data before you start. The tables below are supplied as CSV in coursewa
 
 The SKU1026 row appears after the INSERT and is gone after the DELETE; the three new members are added; Beverages prices rise by 10% (Sparkling Water 1.5L goes from 2.35 to 2.59); and after reloading, the counts return 25 products, 60 customers and 180 orders.
 
-> **Note:** The same steps are in courseware/labs/lab-06-*.md in the course repository.
+> **Note:** The same steps are in courseware/labs/lab-06-*/ in the course repository, alongside that lab's CSV data and SQL seed scripts.
 
 ---
 
@@ -762,7 +762,7 @@ A management summary of SG Mart trading — order counts, average and total reve
 
 **Mock data for this lab**
 
-Load the data before you start. The tables below are supplied as CSV in courseware/labs/datasets/lab-07-*/, together with seed_sqlite.sql — open that script in the SQL editor and execute it to create and fill every table in one step.
+Load the data before you start. The tables below are supplied as CSV in courseware/labs/lab-07-*/ — the same folder as this lab's instructions — together with seed_sqlite.sql. Open that script in the SQL editor and execute it to create and fill every table in one step.
 
 | Table | Rows | What it holds |
 |---|---|---|
@@ -842,7 +842,7 @@ Load the data before you start. The tables below are supplied as CSV in coursewa
 
 COUNT(*) returns 180 orders while COUNT(CustomerID) returns 163 (17 walk-ins are NULL); average line value is 13.48; total revenue is 9231.43; prices range from 2.10 to 11.90; and there are 5 distinct payment methods with 165 completed orders.
 
-> **Note:** The same steps are in courseware/labs/lab-07-*.md in the course repository.
+> **Note:** The same steps are in courseware/labs/lab-07-*/ in the course repository, alongside that lab's CSV data and SQL seed scripts.
 
 ---
 
@@ -859,7 +859,7 @@ Joined result-sets linking orders, outlets, customers and products, plus a full-
 
 **Mock data for this lab**
 
-Load the data before you start. The tables below are supplied as CSV in courseware/labs/datasets/lab-08-*/, together with seed_sqlite.sql — open that script in the SQL editor and execute it to create and fill every table in one step.
+Load the data before you start. The tables below are supplied as CSV in courseware/labs/lab-08-*/ — the same folder as this lab's instructions — together with seed_sqlite.sql. Open that script in the SQL editor and execute it to create and fill every table in one step.
 
 | Table | Rows | What it holds |
 |---|---|---|
@@ -969,7 +969,7 @@ Load the data before you start. The tables below are supplied as CSV in coursewa
 
 The inner joins return only matched rows; the LEFT JOIN lists every order with NULL names for walk-ins and the orphan count returns 17; the three-way join is led by SG Mart outlets selling Pineapple Tarts; and the full-join emulation returns ids 1–6 with NULLs on the sides that have no match.
 
-> **Note:** The same steps are in courseware/labs/lab-08-*.md in the course repository.
+> **Note:** The same steps are in courseware/labs/lab-08-*/ in the course repository, alongside that lab's CSV data and SQL seed scripts.
 
 ---
 
@@ -986,7 +986,7 @@ Grouped sales summaries of the SG Mart data — per-outlet and per-category tota
 
 **Mock data for this lab**
 
-Load the data before you start. The tables below are supplied as CSV in courseware/labs/datasets/lab-09-*/, together with seed_sqlite.sql — open that script in the SQL editor and execute it to create and fill every table in one step.
+Load the data before you start. The tables below are supplied as CSV in courseware/labs/lab-09-*/ — the same folder as this lab's instructions — together with seed_sqlite.sql. Open that script in the SQL editor and execute it to create and fill every table in one step.
 
 | Table | Rows | What it holds |
 |---|---|---|
@@ -1077,7 +1077,7 @@ Load the data before you start. The tables below are supplied as CSV in coursewa
 
 The GROUP BY query returns one row per outlet (8 rows, led by OTL08 with 28 orders); revenue by outlet is led by SG Mart Serangoon NEX at 1496.82; the HAVING > 13 query returns the 5 qualifying outlets; and 18 members have 4 or more orders.
 
-> **Note:** The same steps are in courseware/labs/lab-09-*.md in the course repository.
+> **Note:** The same steps are in courseware/labs/lab-09-*/ in the course repository, alongside that lab's CSV data and SQL seed scripts.
 
 ---
 
@@ -1106,7 +1106,7 @@ A four-table transport schema in SQLite that faithfully implements the SMRT E-R 
 
 **Mock data for this lab**
 
-Load the data before you start. The tables below are supplied as CSV in courseware/labs/datasets/lab-10-*/, together with seed_sqlite.sql — open that script in the SQL editor and execute it to create and fill every table in one step.
+Load the data before you start. The tables below are supplied as CSV in courseware/labs/lab-10-*/ — the same folder as this lab's instructions — together with seed_sqlite.sql. Open that script in the SQL editor and execute it to create and fill every table in one step.
 
 | Table | Rows | What it holds |
 |---|---|---|
@@ -1236,7 +1236,7 @@ Load the data before you start. The tables below are supplied as CSV in coursewa
 
 The four tables exist with their PK/FK constraints visible in the DDL; Routes returns 8 rows; the NSL station query returns 4 stations in line order; the three-way join returns the 6 disruptions each linked to a route and station; and the LEFT JOIN summary lists every route including those with zero disruptions.
 
-> **Note:** The same steps are in courseware/labs/lab-10-*.md in the course repository.
+> **Note:** The same steps are in courseware/labs/lab-10-*/ in the course repository, alongside that lab's CSV data and SQL seed scripts.
 
 ---
 
@@ -1253,7 +1253,7 @@ Stored-procedure scripts (plain and parameterised) ready to run on SQL Server, p
 
 **Mock data for this lab**
 
-Load the data before you start. The tables below are supplied as CSV in courseware/labs/datasets/lab-11-*/, together with seed_sqlite.sql — open that script in the SQL editor and execute it to create and fill every table in one step.
+Load the data before you start. The tables below are supplied as CSV in courseware/labs/lab-11-*/ — the same folder as this lab's instructions — together with seed_sqlite.sql. Open that script in the SQL editor and execute it to create and fill every table in one step.
 
 | Table | Rows | What it holds |
 |---|---|---|
@@ -1333,7 +1333,7 @@ Load the data before you start. The tables below are supplied as CSV in coursewa
 
 All three procedures create without error; EXEC SelectAllCustomers returns the full 60-member list; EXEC SelectCustomersByTier @Tier = 'Platinum' returns only the 7 Platinum members ordered by points; and the two-parameter procedure returns one summary row for OTL08.
 
-> **Note:** The same steps are in courseware/labs/lab-11-*.md in the course repository.
+> **Note:** The same steps are in courseware/labs/lab-11-*/ in the course repository, alongside that lab's CSV data and SQL seed scripts.
 
 ---
 

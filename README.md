@@ -22,7 +22,7 @@ multiple tables, and map it into a data warehouse — all in SQLite Studio again
 | Learner Guide | [courseware/LG-SQL Fundamental for Beginners.docx](courseware/LG-SQL%20Fundamental%20for%20Beginners.docx) · [PDF](courseware/LG-SQL%20Fundamental%20for%20Beginners.pdf) |
 | Learner Guide (Markdown mirror) | [LG-SQL Fundamental for Beginners.md](LG-SQL%20Fundamental%20for%20Beginners.md) |
 | Hands-on labs (11) | [labs/](labs/) — see [labs/README.md](labs/README.md) |
-| Mock datasets (per lab) | [labs/datasets/](labs/datasets/) — CSV, Excel, SQL seeds and a prebuilt `sgmart.db` |
+| Mock datasets | inside each lab's own folder — CSV + SQL seeds; full set in [labs/_all/](labs/_all/) (Excel workbook + prebuilt `sgmart.db`) |
 
 The slide deck is **visual only** — every detailed step-by-step procedure lives in the
 Learner Guide and the `labs/` files, by design.
@@ -47,7 +47,7 @@ Learner Guide and the `labs/` files, by design.
 
 - **SQLite Studio** — https://sqlitestudio.pl (free, cross-platform)
 - **sqliteonline.com** — browser alternative, also provides an MS SQL engine for Lab 11
-- **SG Mart mock dataset** — supplied in [labs/datasets/](labs/datasets/): one folder per lab with CSVs and a seed script, plus [`_all/`](labs/datasets/_all/) holding an Excel workbook and a prebuilt `sgmart.db`. Also downloadable from the LMS with the course materials.
+- **SG Mart mock dataset** — each lab folder under [labs/](labs/) carries its own CSVs and seed scripts beside the instructions; the complete set, with an Excel workbook and a prebuilt `sgmart.db`, is in [labs/_all/](labs/_all/). Also downloadable from the LMS with the course materials.
 
 ## The course dataset — SG Mart Pte Ltd
 
@@ -57,11 +57,12 @@ Singapore retail chain with 8 outlets, 42 staff, 60 loyalty members, 9 suppliers
 public-transport model (routes, stations, timetables, disruptions) for the
 data-warehouse case study.
 
-Each lab has its own folder under [labs/datasets/](labs/datasets/) containing only the
-tables that lab needs — as CSV (Excel-friendly), plus `seed_sqlite.sql` and
-`seed_mysql.sql` that create and fill everything in one execution. The complete set,
-including `SG-Mart-Mock-Data.xlsx` and a prebuilt `sgmart.db`, is in
-[labs/datasets/_all/](labs/datasets/_all/).
+**Each lab is one self-contained folder** under [labs/](labs/) holding the instructions,
+the data and the SQL together — `lab-NN-<slug>.md`, only the tables that lab needs as CSV
+(Excel-friendly), and `seed_sqlite.sql` / `seed_mysql.sql` that create and fill everything
+in one execution. Open the folder, run the seed script, follow the markdown. The complete
+set, including `SG-Mart-Mock-Data.xlsx` and a prebuilt `sgmart.db`, is in
+[labs/_all/](labs/_all/).
 
 Some columns are deliberately empty (walk-in orders with no member, staff without a work
 email, products without a reorder level) so `IS NULL`, `LEFT JOIN` and `COUNT()` behave

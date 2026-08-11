@@ -10,23 +10,23 @@
 
 **Tools:** SQLite Studio, sgmart database, lab-09 dataset
 
-![Lab 9 — SQL editor](../figures/lab-09.png)
+![Lab 9 — SQL editor](../../figures/lab-09.png)
 
 *Figure 9 — the SQL editor after running this lab's key statement.*
 
 ## Mock data for this lab
 
-Everything this lab needs is in [`datasets/lab-09-group-data-with-group-by-and-having/`](datasets/lab-09-group-data-with-group-by-and-having/) — CSV files you can open in Excel, plus a seed script that creates and fills the tables in one go.
+The data is in this same folder — CSV files you can open in Excel, plus a seed script that creates and fills the tables in one go.
 
 | Table | Rows | What it holds |
 |---|---:|---|
-| [`Orders`](datasets/lab-09-group-data-with-group-by-and-having/Orders.csv) | 180 | 180 sales orders across 2025 — outlet, member (NULL for walk-ins), cashier, channel, payment and status. |
-| [`OrderItems`](datasets/lab-09-group-data-with-group-by-and-having/OrderItems.csv) | 685 | Order lines (the fact table) — quantity, unit price, discount and line total. Makes SUM/AVG/GROUP BY meaningful. |
-| [`Products`](datasets/lab-09-group-data-with-group-by-and-having/Products.csv) | 25 | 25 SKUs with cost, retail price, category, supplier and reorder level (some NULL). |
-| [`Categories`](datasets/lab-09-group-data-with-group-by-and-having/Categories.csv) | 8 | 8 product categories grouped into Perishables, Packaged and Non-Food. |
-| [`Outlets`](datasets/lab-09-group-data-with-group-by-and-having/Outlets.csv) | 8 | The 8 SG Mart retail outlets — code, name, planning area, postal sector, opening date and floor area. |
+| [`Orders`](Orders.csv) | 180 | 180 sales orders across 2025 — outlet, member (NULL for walk-ins), cashier, channel, payment and status. |
+| [`OrderItems`](OrderItems.csv) | 685 | Order lines (the fact table) — quantity, unit price, discount and line total. Makes SUM/AVG/GROUP BY meaningful. |
+| [`Products`](Products.csv) | 25 | 25 SKUs with cost, retail price, category, supplier and reorder level (some NULL). |
+| [`Categories`](Categories.csv) | 8 | 8 product categories grouped into Perishables, Packaged and Non-Food. |
+| [`Outlets`](Outlets.csv) | 8 | The 8 SG Mart retail outlets — code, name, planning area, postal sector, opening date and floor area. |
 
-**Quickest way to load it:** open [`datasets/lab-09-group-data-with-group-by-and-having/seed_sqlite.sql`](datasets/lab-09-group-data-with-group-by-and-having/seed_sqlite.sql) in the SQLite Studio SQL editor and execute the whole script. On MySQL or SQL Server use [`seed_mysql.sql`](datasets/lab-09-group-data-with-group-by-and-having/seed_mysql.sql) instead. The complete course dataset — including an Excel workbook and a prebuilt `sgmart.db` — is in [`datasets/_all/`](datasets/_all/).
+**Quickest way to load it:** open [`seed_sqlite.sql`](seed_sqlite.sql) in the SQLite Studio SQL editor and execute the whole script. On MySQL or SQL Server use [`seed_mysql.sql`](seed_mysql.sql) instead. The complete course dataset — including an Excel workbook and a prebuilt `sgmart.db` — is in [`../_all/`](../_all/).
 
 ## Steps
 

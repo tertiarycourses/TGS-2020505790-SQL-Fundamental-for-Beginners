@@ -10,21 +10,21 @@
 
 **Tools:** SQL Editor, SQL Server syntax (sqliteonline.com's MS SQL engine, or any SQL Server), lab-11 dataset (seed_mysql.sql)
 
-![Lab 11 — SQL editor](../figures/lab-11.png)
+![Lab 11 — SQL editor](../../figures/lab-11.png)
 
 *Figure 11 — the SQL editor after running this lab's key statement.*
 
 ## Mock data for this lab
 
-Everything this lab needs is in [`datasets/lab-11-author-stored-procedures-for-sql-server/`](datasets/lab-11-author-stored-procedures-for-sql-server/) — CSV files you can open in Excel, plus a seed script that creates and fills the tables in one go.
+The data is in this same folder — CSV files you can open in Excel, plus a seed script that creates and fills the tables in one go.
 
 | Table | Rows | What it holds |
 |---|---:|---|
-| [`Customers`](datasets/lab-11-author-stored-procedures-for-sql-server/Customers.csv) | 60 | 60 loyalty members — tier, join date, points, birth year (some NULL) and home district. |
-| [`Orders`](datasets/lab-11-author-stored-procedures-for-sql-server/Orders.csv) | 180 | 180 sales orders across 2025 — outlet, member (NULL for walk-ins), cashier, channel, payment and status. |
-| [`Outlets`](datasets/lab-11-author-stored-procedures-for-sql-server/Outlets.csv) | 8 | The 8 SG Mart retail outlets — code, name, planning area, postal sector, opening date and floor area. |
+| [`Customers`](Customers.csv) | 60 | 60 loyalty members — tier, join date, points, birth year (some NULL) and home district. |
+| [`Orders`](Orders.csv) | 180 | 180 sales orders across 2025 — outlet, member (NULL for walk-ins), cashier, channel, payment and status. |
+| [`Outlets`](Outlets.csv) | 8 | The 8 SG Mart retail outlets — code, name, planning area, postal sector, opening date and floor area. |
 
-**Quickest way to load it:** open [`datasets/lab-11-author-stored-procedures-for-sql-server/seed_sqlite.sql`](datasets/lab-11-author-stored-procedures-for-sql-server/seed_sqlite.sql) in the SQLite Studio SQL editor and execute the whole script. On MySQL or SQL Server use [`seed_mysql.sql`](datasets/lab-11-author-stored-procedures-for-sql-server/seed_mysql.sql) instead. The complete course dataset — including an Excel workbook and a prebuilt `sgmart.db` — is in [`datasets/_all/`](datasets/_all/).
+**Quickest way to load it:** open [`seed_sqlite.sql`](seed_sqlite.sql) in the SQLite Studio SQL editor and execute the whole script. On MySQL or SQL Server use [`seed_mysql.sql`](seed_mysql.sql) instead. The complete course dataset — including an Excel workbook and a prebuilt `sgmart.db` — is in [`../_all/`](../_all/).
 
 ## Steps
 

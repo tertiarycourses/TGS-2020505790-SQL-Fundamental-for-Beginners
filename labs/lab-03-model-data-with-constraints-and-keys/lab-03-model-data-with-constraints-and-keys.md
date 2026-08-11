@@ -10,20 +10,20 @@
 
 **Tools:** SQLite Studio, SQL Editor, lab-03 dataset (Persons + PersonOrders)
 
-![Lab 3 — SQL editor](../figures/lab-03.png)
+![Lab 3 — SQL editor](../../figures/lab-03.png)
 
 *Figure 3 — the SQL editor after running this lab's key statement.*
 
 ## Mock data for this lab
 
-Everything this lab needs is in [`datasets/lab-03-model-data-with-constraints-and-keys/`](datasets/lab-03-model-data-with-constraints-and-keys/) — CSV files you can open in Excel, plus a seed script that creates and fills the tables in one go.
+The data is in this same folder — CSV files you can open in Excel, plus a seed script that creates and fills the tables in one go.
 
 | Table | Rows | What it holds |
 |---|---:|---|
-| [`Persons`](datasets/lab-03-model-data-with-constraints-and-keys/Persons.csv) | 8 | Small Persons table for constraint practice (NOT NULL, UNIQUE, CHECK Age >= 18, DEFAULT City). |
-| [`PersonOrders`](datasets/lab-03-model-data-with-constraints-and-keys/PersonOrders.csv) | 8 | Child table for the Persons FK demo — some rows point at persons who exist, one is deliberately unmatched. |
+| [`Persons`](Persons.csv) | 8 | Small Persons table for constraint practice (NOT NULL, UNIQUE, CHECK Age >= 18, DEFAULT City). |
+| [`PersonOrders`](PersonOrders.csv) | 8 | Child table for the Persons FK demo — some rows point at persons who exist, one is deliberately unmatched. |
 
-**Quickest way to load it:** open [`datasets/lab-03-model-data-with-constraints-and-keys/seed_sqlite.sql`](datasets/lab-03-model-data-with-constraints-and-keys/seed_sqlite.sql) in the SQLite Studio SQL editor and execute the whole script. On MySQL or SQL Server use [`seed_mysql.sql`](datasets/lab-03-model-data-with-constraints-and-keys/seed_mysql.sql) instead. The complete course dataset — including an Excel workbook and a prebuilt `sgmart.db` — is in [`datasets/_all/`](datasets/_all/).
+**Quickest way to load it:** open [`seed_sqlite.sql`](seed_sqlite.sql) in the SQLite Studio SQL editor and execute the whole script. On MySQL or SQL Server use [`seed_mysql.sql`](seed_mysql.sql) instead. The complete course dataset — including an Excel workbook and a prebuilt `sgmart.db` — is in [`../_all/`](../_all/).
 
 ## Steps
 

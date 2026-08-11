@@ -10,25 +10,25 @@
 
 **Tools:** SQLite Studio, sgmart database, lab-08 dataset
 
-![Lab 8 — SQL editor](../figures/lab-08.png)
+![Lab 8 — SQL editor](../../figures/lab-08.png)
 
 *Figure 8 — the SQL editor after running this lab's key statement.*
 
 ## Mock data for this lab
 
-Everything this lab needs is in [`datasets/lab-08-join-data-from-multiple-tables/`](datasets/lab-08-join-data-from-multiple-tables/) — CSV files you can open in Excel, plus a seed script that creates and fills the tables in one go.
+The data is in this same folder — CSV files you can open in Excel, plus a seed script that creates and fills the tables in one go.
 
 | Table | Rows | What it holds |
 |---|---:|---|
-| [`Orders`](datasets/lab-08-join-data-from-multiple-tables/Orders.csv) | 180 | 180 sales orders across 2025 — outlet, member (NULL for walk-ins), cashier, channel, payment and status. |
-| [`OrderItems`](datasets/lab-08-join-data-from-multiple-tables/OrderItems.csv) | 685 | Order lines (the fact table) — quantity, unit price, discount and line total. Makes SUM/AVG/GROUP BY meaningful. |
-| [`Customers`](datasets/lab-08-join-data-from-multiple-tables/Customers.csv) | 60 | 60 loyalty members — tier, join date, points, birth year (some NULL) and home district. |
-| [`Outlets`](datasets/lab-08-join-data-from-multiple-tables/Outlets.csv) | 8 | The 8 SG Mart retail outlets — code, name, planning area, postal sector, opening date and floor area. |
-| [`Products`](datasets/lab-08-join-data-from-multiple-tables/Products.csv) | 25 | 25 SKUs with cost, retail price, category, supplier and reorder level (some NULL). |
-| [`left_t`](datasets/lab-08-join-data-from-multiple-tables/left_t.csv) | 4 | Practice table for the FULL OUTER JOIN emulation (ids 1-4). |
-| [`right_t`](datasets/lab-08-join-data-from-multiple-tables/right_t.csv) | 4 | Practice table for the FULL OUTER JOIN emulation (ids 3-6). |
+| [`Orders`](Orders.csv) | 180 | 180 sales orders across 2025 — outlet, member (NULL for walk-ins), cashier, channel, payment and status. |
+| [`OrderItems`](OrderItems.csv) | 685 | Order lines (the fact table) — quantity, unit price, discount and line total. Makes SUM/AVG/GROUP BY meaningful. |
+| [`Customers`](Customers.csv) | 60 | 60 loyalty members — tier, join date, points, birth year (some NULL) and home district. |
+| [`Outlets`](Outlets.csv) | 8 | The 8 SG Mart retail outlets — code, name, planning area, postal sector, opening date and floor area. |
+| [`Products`](Products.csv) | 25 | 25 SKUs with cost, retail price, category, supplier and reorder level (some NULL). |
+| [`left_t`](left_t.csv) | 4 | Practice table for the FULL OUTER JOIN emulation (ids 1-4). |
+| [`right_t`](right_t.csv) | 4 | Practice table for the FULL OUTER JOIN emulation (ids 3-6). |
 
-**Quickest way to load it:** open [`datasets/lab-08-join-data-from-multiple-tables/seed_sqlite.sql`](datasets/lab-08-join-data-from-multiple-tables/seed_sqlite.sql) in the SQLite Studio SQL editor and execute the whole script. On MySQL or SQL Server use [`seed_mysql.sql`](datasets/lab-08-join-data-from-multiple-tables/seed_mysql.sql) instead. The complete course dataset — including an Excel workbook and a prebuilt `sgmart.db` — is in [`datasets/_all/`](datasets/_all/).
+**Quickest way to load it:** open [`seed_sqlite.sql`](seed_sqlite.sql) in the SQLite Studio SQL editor and execute the whole script. On MySQL or SQL Server use [`seed_mysql.sql`](seed_mysql.sql) instead. The complete course dataset — including an Excel workbook and a prebuilt `sgmart.db` — is in [`../_all/`](../_all/).
 
 ## Steps
 
