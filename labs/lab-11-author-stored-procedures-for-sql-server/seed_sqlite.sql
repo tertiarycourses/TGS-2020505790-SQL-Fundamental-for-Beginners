@@ -1,5 +1,5 @@
 -- Lab 11 — Author Stored Procedures for SQL Server: mock data
--- SQL Fundamental for Beginners (TGS-2020505790) · v13 · Tertiary Infotech Academy Pte Ltd
+-- SQL Fundamental for Beginners (TGS-2020505790) · v14 · Tertiary Infotech Academy Pte Ltd
 -- Dialect: SQLite
 -- Load: open this file in your SQL editor and execute the whole script.
 
@@ -112,6 +112,8 @@ INSERT INTO Customers (CustomerID, FirstName, LastName, MemberTier, JoinDate, Po
 -- --------------------------------------------------------------------
 -- Orders — 180 sales orders across 2025 — outlet, member (NULL for walk-ins), cashier, channel, payment and status.
 -- --------------------------------------------------------------------
+-- Note: this lab does not ship Staff, so the foreign key(s) StaffID -> Staff(StaffID)
+-- are omitted here. The full model with every relationship is in _all/.
 DROP TABLE IF EXISTS Orders;
 CREATE TABLE Orders (
   OrderID INTEGER PRIMARY KEY,
@@ -124,8 +126,7 @@ CREATE TABLE Orders (
   PaymentMethod TEXT,
   Status TEXT,
   FOREIGN KEY (OutletCode) REFERENCES Outlets(OutletCode),
-  FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
-  FOREIGN KEY (StaffID) REFERENCES Staff(StaffID)
+  FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
 );
 
 INSERT INTO Orders (OrderID, OrderDate, OrderTime, OutletCode, CustomerID, StaffID, Channel, PaymentMethod, Status) VALUES

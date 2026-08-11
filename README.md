@@ -5,7 +5,7 @@
 **Trainer:** Dr. Alfred Ang
 **Duration:** 1 day · 8 training hours (9:30 am – 6:30 pm, 1-hour lunch)
 **Skills Framework:** Data Engineering — ICT-DIT-3005-1.1 (ICT Skills Framework)
-**Version:** v13 · 11 August 2026
+**Version:** v14 · 11 August 2026
 **Course page:** https://www.tertiarycourses.com.sg/wsq-sql-fundamental-for-beginners.html
 
 A hands-on introduction to SQL: model data, query and analyse it, transform it across
@@ -16,8 +16,8 @@ multiple tables, and map it into a data warehouse — all in SQLite Studio again
 
 | Artifact | Path |
 |---|---|
-| Trainer slide deck (132 slides) | [courseware/SQL Fundamental for Beginners-v13.pptx](courseware/SQL%20Fundamental%20for%20Beginners-v13.pptx) |
-| Learner slides (PDF) | [courseware/SQL Fundamental for Beginners-v13.pdf](courseware/SQL%20Fundamental%20for%20Beginners-v13.pdf) |
+| Trainer slide deck (132 slides) | [courseware/SQL Fundamental for Beginners-v14.pptx](courseware/SQL%20Fundamental%20for%20Beginners-v14.pptx) |
+| Learner slides (PDF) | [courseware/SQL Fundamental for Beginners-v14.pdf](courseware/SQL%20Fundamental%20for%20Beginners-v14.pdf) |
 | Lesson Plan | [courseware/LP-SQL Fundamental for Beginners.docx](courseware/LP-SQL%20Fundamental%20for%20Beginners.docx) · [PDF](courseware/LP-SQL%20Fundamental%20for%20Beginners.pdf) |
 | Learner Guide | [courseware/LG-SQL Fundamental for Beginners.docx](courseware/LG-SQL%20Fundamental%20for%20Beginners.docx) · [PDF](courseware/LG-SQL%20Fundamental%20for%20Beginners.pdf) |
 | Learner Guide (Markdown mirror) | [LG-SQL Fundamental for Beginners.md](LG-SQL%20Fundamental%20for%20Beginners.md) |

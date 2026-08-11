@@ -1,5 +1,5 @@
 -- Lab 5 — Filter with SQL Operators: mock data
--- SQL Fundamental for Beginners (TGS-2020505790) · v13 · Tertiary Infotech Academy Pte Ltd
+-- SQL Fundamental for Beginners (TGS-2020505790) · v14 · Tertiary Infotech Academy Pte Ltd
 -- Dialect: SQLite
 -- Load: open this file in your SQL editor and execute the whole script.
 
@@ -89,6 +89,8 @@ INSERT INTO Customers (CustomerID, FirstName, LastName, MemberTier, JoinDate, Po
 -- --------------------------------------------------------------------
 -- Staff — 42 employees across the 8 outlets — role, salary, hire date and contact details (some emails are NULL on purpose).
 -- --------------------------------------------------------------------
+-- Note: this lab does not ship Outlets, so the foreign key(s) OutletCode -> Outlets(OutletCode)
+-- are omitted here. The full model with every relationship is in _all/.
 DROP TABLE IF EXISTS Staff;
 CREATE TABLE Staff (
   StaffID INTEGER PRIMARY KEY,
@@ -101,8 +103,7 @@ CREATE TABLE Staff (
   MonthlySalary REAL,
   Phone TEXT,
   Email TEXT,
-  Employment TEXT,
-  FOREIGN KEY (OutletCode) REFERENCES Outlets(OutletCode)
+  Employment TEXT
 );
 
 INSERT INTO Staff (StaffID, BadgeNo, FirstName, LastName, Role, OutletCode, HireDate, MonthlySalary, Phone, Email, Employment) VALUES
@@ -153,6 +154,8 @@ INSERT INTO Staff (StaffID, BadgeNo, FirstName, LastName, Role, OutletCode, Hire
 -- --------------------------------------------------------------------
 -- Products — 25 SKUs with cost, retail price, category, supplier and reorder level (some NULL).
 -- --------------------------------------------------------------------
+-- Note: this lab does not ship Categories, Suppliers, so the foreign key(s) CategoryCode -> Categories(CategoryCode); SupplierID -> Suppliers(SupplierID)
+-- are omitted here. The full model with every relationship is in _all/.
 DROP TABLE IF EXISTS Products;
 CREATE TABLE Products (
   SKU TEXT PRIMARY KEY,
@@ -163,9 +166,7 @@ CREATE TABLE Products (
   UnitPrice REAL,
   SupplierID TEXT,
   ReorderLevel INTEGER,
-  IsActive INTEGER,
-  FOREIGN KEY (CategoryCode) REFERENCES Categories(CategoryCode),
-  FOREIGN KEY (SupplierID) REFERENCES Suppliers(SupplierID)
+  IsActive INTEGER
 );
 
 INSERT INTO Products (SKU, ProductName, CategoryCode, UnitOfMeasure, UnitCost, UnitPrice, SupplierID, ReorderLevel, IsActive) VALUES

@@ -1,5 +1,5 @@
 -- Lab 2 — Create a Database and Tables: mock data
--- SQL Fundamental for Beginners (TGS-2020505790) · v13 · Tertiary Infotech Academy Pte Ltd
+-- SQL Fundamental for Beginners (TGS-2020505790) · v14 · Tertiary Infotech Academy Pte Ltd
 -- Dialect: SQLite
 -- Load: open this file in your SQL editor and execute the whole script.
 

@@ -1,5 +1,5 @@
 -- Lab 9 — Group Data with GROUP BY and HAVING: mock data
--- SQL Fundamental for Beginners (TGS-2020505790) · v13 · Tertiary Infotech Academy Pte Ltd
+-- SQL Fundamental for Beginners (TGS-2020505790) · v14 · Tertiary Infotech Academy Pte Ltd
 -- Dialect: MySQL / MS SQL
 -- Load: open this file in your SQL editor and execute the whole script.
 
@@ -49,6 +49,8 @@ INSERT INTO Categories (CategoryCode, CategoryName, CategoryGroup) VALUES
 -- --------------------------------------------------------------------
 -- Products — 25 SKUs with cost, retail price, category, supplier and reorder level (some NULL).
 -- --------------------------------------------------------------------
+-- Note: this lab does not ship Suppliers, so the foreign key(s) SupplierID -> Suppliers(SupplierID)
+-- are omitted here. The full model with every relationship is in _all/.
 DROP TABLE IF EXISTS Products;
 CREATE TABLE Products (
   SKU VARCHAR(8) PRIMARY KEY,
@@ -60,8 +62,7 @@ CREATE TABLE Products (
   SupplierID VARCHAR(5),
   ReorderLevel INT,
   IsActive TINYINT,
-  FOREIGN KEY (CategoryCode) REFERENCES Categories(CategoryCode),
-  FOREIGN KEY (SupplierID) REFERENCES Suppliers(SupplierID)
+  FOREIGN KEY (CategoryCode) REFERENCES Categories(CategoryCode)
 );
 
 INSERT INTO Products (SKU, ProductName, CategoryCode, UnitOfMeasure, UnitCost, UnitPrice, SupplierID, ReorderLevel, IsActive) VALUES
@@ -94,6 +95,8 @@ INSERT INTO Products (SKU, ProductName, CategoryCode, UnitOfMeasure, UnitCost, U
 -- --------------------------------------------------------------------
 -- Orders — 180 sales orders across 2025 — outlet, member (NULL for walk-ins), cashier, channel, payment and status.
 -- --------------------------------------------------------------------
+-- Note: this lab does not ship Customers, Staff, so the foreign key(s) CustomerID -> Customers(CustomerID); StaffID -> Staff(StaffID)
+-- are omitted here. The full model with every relationship is in _all/.
 DROP TABLE IF EXISTS Orders;
 CREATE TABLE Orders (
   OrderID INT PRIMARY KEY,
@@ -105,9 +108,7 @@ CREATE TABLE Orders (
   Channel VARCHAR(12),
   PaymentMethod VARCHAR(15),
   Status VARCHAR(12),
-  FOREIGN KEY (OutletCode) REFERENCES Outlets(OutletCode),
-  FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
-  FOREIGN KEY (StaffID) REFERENCES Staff(StaffID)
+  FOREIGN KEY (OutletCode) REFERENCES Outlets(OutletCode)
 );
 
 INSERT INTO Orders (OrderID, OrderDate, OrderTime, OutletCode, CustomerID, StaffID, Channel, PaymentMethod, Status) VALUES
