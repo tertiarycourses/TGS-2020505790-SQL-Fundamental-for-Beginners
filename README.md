@@ -6,7 +6,7 @@
 **Duration:** 1 day · 8 training hours (9:30 am – 6:30 pm, 1-hour lunch)
 **Skills Framework:** Data Engineering — ICT-DIT-3005-1.1 (ICT Skills Framework)
 **Version:** v14 · 11 August 2026
-**Course page:** https://www.tertiarycourses.com.sg/wsq-sql-fundamental-for-beginners.html
+**Registration:** [View course details and register](https://www.tertiarycourses.com.sg/wsq-sql-fundamental-for-beginners.html)
 
 A hands-on introduction to SQL: model data, query and analyse it, transform it across
 multiple tables, and map it into a data warehouse — all in SQLite Studio against the
